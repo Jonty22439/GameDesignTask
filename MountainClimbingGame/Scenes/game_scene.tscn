@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgyw4bvfwmjm2"]
+
+[ext_resource type="PackedScene" uid="uid://ba7sute0gamiq" path="res://Prefabs/Character.tscn" id="1_osg1m"]
+[ext_resource type="PackedScene" uid="uid://qk3pdqgayr3w" path="res://Prefabs/BasicPlatform.tscn" id="2_0th1f"]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_osg1m")]
+position = Vector2(592, 418)
+
+[node name="Platform" parent="." instance=ExtResource("2_0th1f")]
+position = Vector2(584, 547)
+scale = Vector2(8.62826, 0.759967)
