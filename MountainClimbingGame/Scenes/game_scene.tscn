@@ -1,19 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgyw4bvfwmjm2"]
+[gd_scene load_steps=4 format=3 uid="uid://cgyw4bvfwmjm2"]
 
 [ext_resource type="PackedScene" uid="uid://ba7sute0gamiq" path="res://Prefabs/Character.tscn" id="1_osg1m"]
 [ext_resource type="PackedScene" uid="uid://qk3pdqgayr3w" path="res://Prefabs/BasicPlatform.tscn" id="2_0th1f"]
+[ext_resource type="PackedScene" uid="uid://cdmh6ioxld1c0" path="res://Prefabs/Portal.tscn" id="3_8mryb"]
 
 [node name="GameScene" type="Node2D"]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_osg1m")]
-position = Vector2(592, 418)
 
 [node name="Platform" parent="." instance=ExtResource("2_0th1f")]
 position = Vector2(584, 547)
 scale = Vector2(8.62826, 0.759967)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("2_0th1f")]
+[node name="Platform1" parent="." instance=ExtResource("2_0th1f")]
 position = Vector2(1299, 408)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("2_0th1f")]
+[node name="Platform2" parent="." instance=ExtResource("2_0th1f")]
 position = Vector2(1572, 265)
+
+[node name="Portal" parent="." instance=ExtResource("3_8mryb")]
+position = Vector2(1904, 34)
+
+[node name="Player" parent="." instance=ExtResource("1_osg1m")]
+position = Vector2(579, 369)

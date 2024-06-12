@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvmcgk2vbuku5"]
+
+[ext_resource type="Script" path="res://Scenes/TempButton.gd" id="1_ou8pj"]
+
+[node name="WinScene" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 465.0
+offset_top = 312.0
+offset_right = 726.0
+offset_bottom = 343.0
+text = "Restart the Game (temporary UI)"
+script = ExtResource("1_ou8pj")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
