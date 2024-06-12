@@ -9,8 +9,11 @@ size = Vector2(128, 128)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ehmgo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_beqr7")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_5cfn3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_beqr7")
