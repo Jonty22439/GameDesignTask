@@ -14,10 +14,10 @@ scale = Vector2(8.62826, 0.759967)
 position = Vector2(1299, 408)
 
 [node name="Platform2" parent="." instance=ExtResource("2_0th1f")]
-position = Vector2(1572, 265)
+position = Vector2(1705, 218)
 
 [node name="Portal" parent="." instance=ExtResource("3_8mryb")]
-position = Vector2(1904, 34)
+position = Vector2(2188, 51)
 
 [node name="Player" parent="." instance=ExtResource("1_osg1m")]
 position = Vector2(579, 369)

@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://ba7sute0gamiq"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_ehmgo"]
-[ext_resource type="Texture2D" uid="uid://bad0byw1qad8u" path="res://Sprites/icon.svg" id="2_5cfn3"]
+[ext_resource type="Texture2D" uid="uid://dpq1c8haqx30b" path="res://Sprites/Fred.png" id="2_bhijd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beqr7"]
-size = Vector2(128, 128)
+size = Vector2(32, 64)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ehmgo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_5cfn3")
+texture = ExtResource("2_bhijd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
