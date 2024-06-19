@@ -20,7 +20,8 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	if is_on_floor():
 		jump_count = 0
-
+	if dashing:
+		velocity.y = 0
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and jump_count < max_jumps:
 		velocity.y = JUMP_VELOCITY
