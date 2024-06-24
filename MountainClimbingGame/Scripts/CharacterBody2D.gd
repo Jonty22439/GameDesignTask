@@ -10,6 +10,8 @@ var jump_count = 0
 const DASH_SPEED = 900.0
 var dashing = false
 var can_dash = true
+const SPAWN_Y = -20
+const SPAWN_X = 585
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -19,6 +21,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if is_on_floor():
+
 		jump_count = 0
 	if dashing:
 		velocity.y = 0
@@ -42,7 +45,12 @@ func _physics_process(delta):
 			velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
+	# Respawning system, this is a temporary fix to respawning
+	# I plan on making checkpoints at some point
+	if position.y >= 1000:
+		position.y = SPAWN_Y
+		position.x = SPAWN_X
 	move_and_slide()
 
 func _on_dash_timer_timeout():
@@ -51,3 +59,5 @@ func _on_dash_timer_timeout():
 
 func _on_dash_again_timer_timeout():
 	can_dash = true
+	
+
