@@ -10,6 +10,7 @@ var jump_count = 0
 const DASH_SPEED = 900.0
 var dashing = false
 var can_dash = true
+# Spawn variables
 const SPAWN_Y = -20
 const SPAWN_X = 585
 
@@ -52,12 +53,7 @@ func _physics_process(delta):
 		position.y = SPAWN_Y
 		position.x = SPAWN_X
 	move_and_slide()
-
 func _on_dash_timer_timeout():
 	dashing = false
-
-
 func _on_dash_again_timer_timeout():
 	can_dash = true
-	
-
