@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 350.0
 const JUMP_VELOCITY = -650.0
 # Jumping variables for double jump
-var max_jumps = 200
+var max_jumps = 2
 var jump_count = 0
 # Dashing variables for dashing
 const DASH_SPEED = 900.0
