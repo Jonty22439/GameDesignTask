@@ -11,7 +11,7 @@ const DASH_SPEED = 900.0
 var dashing = false
 var can_dash = true
 # Spawn variables
-const SPAWN_Y = -20
+const SPAWN_Y = 400
 const SPAWN_X = 585
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
