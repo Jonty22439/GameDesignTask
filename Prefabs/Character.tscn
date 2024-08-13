@@ -1,7 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba7sute0gamiq"]
+[gd_scene load_steps=9 format=3 uid="uid://ba7sute0gamiq"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_ehmgo"]
-[ext_resource type="Texture2D" uid="uid://dpq1c8haqx30b" path="res://Sprites/Fred.png" id="2_bhijd"]
+[ext_resource type="Texture2D" uid="uid://buetwwc78gi1e" path="res://Sprites/FredAnim.png" id="2_y3tap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xan16"]
+atlas = ExtResource("2_y3tap")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q84mt"]
+atlas = ExtResource("2_y3tap")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmee6"]
+atlas = ExtResource("2_y3tap")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvpgw"]
+atlas = ExtResource("2_y3tap")
+region = Rect2(0, 64, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_auplg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xan16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q84mt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmee6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvpgw")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beqr7"]
 size = Vector2(32, 64)
@@ -9,8 +50,9 @@ size = Vector2(32, 64)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ehmgo")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_bhijd")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_auplg")
+animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
