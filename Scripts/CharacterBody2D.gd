@@ -17,6 +17,8 @@ const SPAWN_X = 585
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var anim : AnimatedSprite2D = $AnimatedSprite2D
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -43,8 +45,10 @@ func _physics_process(delta):
 			velocity.x = direction * DASH_SPEED
 		else:
 			velocity.x = direction * SPEED
+			anim.play("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		anim.play("idle")
 	
 	# Respawning system, this is a temporary fix to respawning
 	# I plan on making checkpoints at some point
