@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://caoj6e8fakirw"]
+
+[ext_resource type="Texture2D" uid="uid://buk3gonp0xg2h" path="res://Sprites/Blanc.png" id="1_aiqap"]
+
+[node name="CreditsScene" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1445.75, 852.75)
+scale = Vector2(2892.5, 1706.5)
+texture = ExtResource("1_aiqap")

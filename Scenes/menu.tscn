@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh2u8j6o5pxqk"]
+[gd_scene load_steps=4 format=3 uid="uid://dh2u8j6o5pxqk"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_dn4ow"]
 [ext_resource type="Texture2D" uid="uid://buk3gonp0xg2h" path="res://Sprites/Blanc.png" id="2_q2w1o"]
+[ext_resource type="Texture2D" uid="uid://de28q1gwq136l" path="res://Sprites/FREDtitle.png" id="3_4mr0x"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_dn4ow")
@@ -15,31 +16,36 @@ texture = ExtResource("2_q2w1o")
 modulate = Color(0, 0, 0, 1)
 offset_left = 67.0
 offset_top = 351.0
-offset_right = 191.0
+offset_right = 114.0
 offset_bottom = 382.0
 tooltip_text = "Drücken Sie diese Taste, um das epische, coole Spiel, das ich erstellt habe, zu spielen und es hoffentlich zu schlagen. Es gibt einige schwierige Sprünge, die ein Problem verursachen könnten, aber weil Sie sich entschieden haben, auf „Play“ zu drücken, anstatt mein Spiel zu schließen, sind Sie wahrscheinlich großartig genug, um es zu schaffen (vielleicht)"
-text = "play"
+text = "PLAY"
 flat = true
 alignment = 0
 
 [node name="Quit" type="Button" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 70.0
-offset_top = 398.0
-offset_right = 264.0
-offset_bottom = 429.0
+offset_left = 67.0
+offset_top = 413.0
+offset_right = 114.0
+offset_bottom = 444.0
 tooltip_text = "Drücken Sie diese Taste, um dieses Spiel zu beenden, da Sie ein Verlierer sind. Sie sind eindeutig kein großartiger Spieler, wenn Sie mein Spiel nicht spielen möchten und sich stattdessen dazu entschließen, es zu schließen."
-text = "quit"
+text = "QUIT"
 flat = true
 alignment = 0
 
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(223, 313)
+scale = Vector2(2.35937, 2.35937)
+texture = ExtResource("3_4mr0x")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 70.0
-offset_top = 292.0
-offset_right = 331.0
-offset_bottom = 319.0
-text = "cool platformer game"
+offset_left = 74.0
+offset_top = 388.0
+offset_right = 389.0
+offset_bottom = 412.0
+text = "Credits button go here"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
