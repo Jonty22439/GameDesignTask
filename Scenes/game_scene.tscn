@@ -24,7 +24,7 @@ sources/0 = SubResource("TileSetAtlasSource_u0xvm")
 [node name="GameScene" type="Node2D"]
 
 [node name="Portal" parent="." instance=ExtResource("3_8mryb")]
-position = Vector2(-170, -115)
+position = Vector2(-150, -97)
 
 [node name="TilemapBG" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_cjivd")

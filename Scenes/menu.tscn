@@ -1,16 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://dh2u8j6o5pxqk"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_dn4ow"]
-[ext_resource type="Texture2D" uid="uid://buk3gonp0xg2h" path="res://Sprites/Blanc.png" id="2_q2w1o"]
+[ext_resource type="Texture2D" uid="uid://c73gdyqrdubya" path="res://Sprites/menuBG.png" id="2_npav2"]
 [ext_resource type="Texture2D" uid="uid://de28q1gwq136l" path="res://Sprites/FREDtitle.png" id="3_4mr0x"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_dn4ow")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1445.75, 852.75)
-scale = Vector2(2892.5, 1706.5)
-texture = ExtResource("2_q2w1o")
+position = Vector2(960, 540)
+texture = ExtResource("2_npav2")
 
 [node name="Play" type="Button" parent="."]
 modulate = Color(0, 0, 0, 1)

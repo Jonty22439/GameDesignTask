@@ -1,15 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://caoj6e8fakirw"]
 
 [ext_resource type="Script" path="res://Scenes/credits_scene.gd" id="1_7fe50"]
-[ext_resource type="Texture2D" uid="uid://buk3gonp0xg2h" path="res://Sprites/Blanc.png" id="1_aiqap"]
+[ext_resource type="Texture2D" uid="uid://c73gdyqrdubya" path="res://Sprites/menuBG.png" id="2_t087e"]
 
 [node name="CreditsScene" type="Node2D"]
 script = ExtResource("1_7fe50")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1445.75, 852.75)
-scale = Vector2(2892.5, 1706.5)
-texture = ExtResource("1_aiqap")
+position = Vector2(960, 540)
+texture = ExtResource("2_t087e")
 
 [node name="Back" type="Button" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -22,10 +21,10 @@ flat = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 49.0
-offset_top = 182.0
-offset_right = 466.0
-offset_bottom = 271.0
+offset_left = 47.0
+offset_top = 225.0
+offset_right = 464.0
+offset_bottom = 314.0
 theme_override_font_sizes/normal_font_size = 60
 theme_override_font_sizes/bold_font_size = 29
 theme_override_font_sizes/italics_font_size = 29
@@ -36,10 +35,10 @@ scroll_active = false
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 65.0
-offset_top = 272.0
-offset_right = 610.0
-offset_bottom = 348.0
+offset_left = 64.0
+offset_top = 307.0
+offset_right = 609.0
+offset_bottom = 383.0
 text = "Jonty Uren"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
