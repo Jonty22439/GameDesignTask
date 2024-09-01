@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ba7sute0gamiq"]
+[gd_scene load_steps=10 format=3 uid="uid://ba7sute0gamiq"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_ehmgo"]
 [ext_resource type="Texture2D" uid="uid://buetwwc78gi1e" path="res://Sprites/FredAnim.png" id="2_y3tap"]
@@ -10,6 +10,10 @@ region = Rect2(0, 0, 32, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_q84mt"]
 atlas = ExtResource("2_y3tap")
 region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuyki"]
+atlas = ExtResource("2_y3tap")
+region = Rect2(32, 64, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fmee6"]
 atlas = ExtResource("2_y3tap")
@@ -34,6 +38,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fuyki")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_fmee6")
 }, {
 "duration": 1.0,
@@ -52,9 +64,7 @@ script = ExtResource("1_ehmgo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_auplg")
-animation = &"run"
-frame = 1
-frame_progress = 0.83484
+animation = &"jump"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
