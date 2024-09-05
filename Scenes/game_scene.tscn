@@ -43,9 +43,9 @@ position = Vector2(583, 360)
 modulate = Color(0, 0, 0, 1)
 offset_left = 1168.0
 offset_top = 326.0
-offset_right = 1347.0
+offset_right = 1381.0
 offset_bottom = 379.0
-text = "Use W or up arrow to jump up the ledge"
+text = "Use W, space, or up arrow to jump up the ledge"
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -60,8 +60,8 @@ modulate = Color(0, 0, 0, 1)
 offset_left = 1326.0
 offset_top = -138.0
 offset_right = 1505.0
-offset_bottom = -65.0
-text = "You can also press S or the down arrow to dash across gaps"
+offset_bottom = -43.0
+text = "You can also press S, shift, or the down arrow to dash across gaps"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)

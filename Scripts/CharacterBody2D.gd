@@ -45,15 +45,18 @@ func _physics_process(delta):
 			velocity.x = direction * DASH_SPEED
 		else:
 			velocity.x = direction * SPEED
-			if is_on_floor:
+			if is_on_floor():
 				anim.play("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if is_on_floor:
+		if is_on_floor():
 			anim.play("idle")
 	
-	if not is_on_floor:
-		anim.play("jump")
+	if not is_on_floor():
+		if dashing:
+			anim.play("dash")
+		else:
+			anim.play("jump")
 	# Respawning system, this is a temporary fix to respawning
 	# I plan on making checkpoints at some point
 	if position.y >= 1000:
