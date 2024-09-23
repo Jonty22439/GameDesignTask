@@ -46,6 +46,7 @@ offset_top = 326.0
 offset_right = 1381.0
 offset_bottom = 379.0
 text = "Use W, space, or up arrow to jump up the ledge"
+metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -54,6 +55,7 @@ offset_top = -147.0
 offset_right = 317.0
 offset_bottom = -74.0
 text = "Use all these mechanics to reach the portal"
+metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -62,6 +64,7 @@ offset_top = -138.0
 offset_right = 1505.0
 offset_bottom = -43.0
 text = "You can also press S, shift, or the down arrow to dash across gaps"
+metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -70,3 +73,4 @@ offset_top = 228.0
 offset_right = 1711.0
 offset_bottom = 301.0
 text = "press the jump button twice to double jump onto this platform"
+metadata/_edit_use_anchors_ = true

@@ -46,7 +46,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"dash",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -68,7 +68,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -79,7 +79,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beqr7"]
@@ -107,7 +107,6 @@ script = ExtResource("1_ehmgo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_auplg")
 animation = &"idle"
-frame_progress = 0.647833
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true

@@ -33,4 +33,16 @@ theme_override_font_sizes/mono_font_size = 29
 text = "YOU WIN!"
 scroll_active = false
 
+[node name="Play" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 80.0
+offset_top = 375.0
+offset_right = 127.0
+offset_bottom = 406.0
+tooltip_text = "this button sends you to the level"
+text = "PLAY"
+flat = true
+alignment = 0
+
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
