@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_ehmgo"]
 [ext_resource type="Texture2D" uid="uid://buetwwc78gi1e" path="res://Sprites/FredAnim.png" id="2_y3tap"]
+[ext_resource type="Material" uid="uid://b6xfya71hvfpt" path="res://ParticleTextures/snow_walking_particles.tres" id="3_w6ejt"]
+[ext_resource type="Material" uid="uid://dlxwedvdrtxd3" path="res://ParticleTextures/dash_effects.tres" id="4_hl8xw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3wj2"]
 atlas = ExtResource("2_y3tap")
@@ -85,22 +87,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beqr7"]
 size = Vector2(32, 63)
 
-[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_ingrn"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_en6wr"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(6, 1, 1)
-direction = Vector3(1, -1000, 0)
-initial_velocity_min = 60.0
-initial_velocity_max = 60.0
-directional_velocity_min = -20.0
-directional_velocity_max = 20.0
-directional_velocity_curve = SubResource("CurveXYZTexture_ingrn")
-gravity = Vector3(0, 98, 0)
-scale_min = 3.0
-scale_max = 6.0
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ehmgo")
 
@@ -122,7 +108,14 @@ wait_time = 0.2
 
 [node name="WalkingParticles" type="GPUParticles2D" parent="."]
 position = Vector2(0, 31)
-process_material = SubResource("ParticleProcessMaterial_en6wr")
+emitting = false
+amount = 16
+process_material = ExtResource("3_w6ejt")
+
+[node name="DashEffects" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 33
+process_material = ExtResource("4_hl8xw")
 
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

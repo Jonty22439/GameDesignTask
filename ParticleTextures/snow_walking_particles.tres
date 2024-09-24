@@ -1,0 +1,17 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=2 format=3 uid="uid://b6xfya71hvfpt"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_ingrn"]
+
+[resource]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(6, 1, 1)
+direction = Vector3(1, -1000, 0)
+initial_velocity_min = 60.0
+initial_velocity_max = 60.0
+directional_velocity_min = -20.0
+directional_velocity_max = 20.0
+directional_velocity_curve = SubResource("CurveXYZTexture_ingrn")
+gravity = Vector3(0, 98, 0)
+scale_min = 5.0
+scale_max = 8.0

@@ -44,8 +44,10 @@ func _physics_process(delta):
 	if direction:
 		if dashing:
 			velocity.x = direction * DASH_SPEED
+			$DashEffects.emitting = true
 		else:
 			velocity.x = direction * SPEED
+			$DashEffects.emitting = false
 			if is_on_floor():
 				anim.play("run")
 	else:
@@ -59,10 +61,10 @@ func _physics_process(delta):
 			anim.play("jump")
 			
 	# Walking Particles (This is currently not working propperly)
-	if is_on_floor and direction:
-		$WalkingParticles.visible = true
+	if is_on_floor() and direction:
+		$WalkingParticles.emitting = true
 	else:
-		$WalkingParticles.visible = false
+		$WalkingParticles.emitting = false
 		
 	# Respawning system, this is a temporary fix to respawning
 	# I plan on making checkpoints at some point
