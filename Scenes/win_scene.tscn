@@ -40,7 +40,7 @@ offset_top = 375.0
 offset_right = 127.0
 offset_bottom = 406.0
 tooltip_text = "this button sends you to the level"
-text = "PLAY"
+text = "NEXT LEVEL"
 flat = true
 alignment = 0
 

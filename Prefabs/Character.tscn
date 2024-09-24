@@ -120,7 +120,7 @@ wait_time = 0.2
 
 [node name="dash_again_timer" type="Timer" parent="."]
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="WalkingParticles" type="GPUParticles2D" parent="."]
 position = Vector2(0, 31)
 process_material = SubResource("ParticleProcessMaterial_en6wr")
 
