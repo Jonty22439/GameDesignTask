@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdmh6ioxld1c0"]
 
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="1_s4vgq"]
-[ext_resource type="Texture2D" uid="uid://c2n42mpv1agc8" path="res://Sprites/Portal.png" id="2_svtkt"]
+[ext_resource type="Texture2D" uid="uid://cpn0kxqapmfvl" path="res://Sprites/Portal.png" id="2_svtkt"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xqubn"]
-radius = 64.0312
+[sub_resource type="CircleShape2D" id="CircleShape2D_pms3e"]
+radius = 69.0652
 
 [node name="Portal" type="Area2D"]
 script = ExtResource("1_s4vgq")
@@ -13,6 +13,7 @@ script = ExtResource("1_s4vgq")
 texture = ExtResource("2_svtkt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_xqubn")
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_pms3e")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
