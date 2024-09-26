@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh2u8j6o5pxqk"]
+[gd_scene load_steps=5 format=3 uid="uid://dh2u8j6o5pxqk"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_dn4ow"]
 [ext_resource type="Texture2D" uid="uid://c73gdyqrdubya" path="res://Sprites/menuBG.png" id="2_npav2"]
 [ext_resource type="Texture2D" uid="uid://de28q1gwq136l" path="res://Sprites/FREDtitle.png" id="3_4mr0x"]
+[ext_resource type="Texture2D" uid="uid://34tq76o2s5c" path="res://Sprites/Audio.png" id="4_rsmpd"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_dn4ow")
@@ -48,6 +49,21 @@ position = Vector2(223, 313)
 scale = Vector2(2.35937, 2.35937)
 texture = ExtResource("3_4mr0x")
 
+[node name="AudioSlider" type="HSlider" parent="."]
+offset_left = 29.0
+offset_top = 1003.0
+offset_right = 624.0
+offset_bottom = 1057.0
+tooltip_text = "This slider changes the volume of all sound in this game"
+min_value = -30.0
+max_value = 0.0
+
+[node name="Audio" type="Sprite2D" parent="."]
+position = Vector2(648, 1030)
+scale = Vector2(1.03125, 1.03125)
+texture = ExtResource("4_rsmpd")
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="AudioSlider" to="." method="_on_audio_slider_value_changed"]

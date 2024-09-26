@@ -32,22 +32,22 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Jump") and jump_count < max_jumps:
 		velocity.y = JUMP_VELOCITY
 		jump_count = jump_count + 1
+		$jumpsfx.play()
 	
 	if Input.is_action_just_pressed("Dash") and can_dash == true:
 		dashing = true
 		can_dash = false
 		$dash_timer.start()
 		$dash_again_timer.start()
+		$dashsfx.play()
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("LeftWalk", "RightWalk")
 	if direction:
 		if dashing:
 			velocity.x = direction * DASH_SPEED
-			$DashEffects.emitting = true
 		else:
 			velocity.x = direction * SPEED
-			$DashEffects.emitting = false
 			if is_on_floor():
 				anim.play("run")
 	else:
@@ -60,9 +60,16 @@ func _physics_process(delta):
 		else:
 			anim.play("jump")
 			
-	# Walking Particles (This is currently not working propperly)
+	# Dash Particles
+	if dashing:
+		$DashEffects.emitting = true
+	else:
+		$DashEffects.emitting = false
+	# Walking Particles
 	if is_on_floor() and direction:
 		$WalkingParticles.emitting = true
+		if $walkingsfx.playing == false:
+			$walkingsfx.play()
 	else:
 		$WalkingParticles.emitting = false
 		

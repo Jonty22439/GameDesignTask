@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1bpvcd7lev78"
+path="res://.godot/imported/Hollow Knight OST - White Palace.mp3-83256e249273b9fd852bc650275ce8b6.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Hollow Knight OST - White Palace.mp3"
+dest_files=["res://.godot/imported/Hollow Knight OST - White Palace.mp3-83256e249273b9fd852bc650275ce8b6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

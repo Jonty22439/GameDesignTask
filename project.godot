@@ -18,6 +18,7 @@ config/icon="res://Sprites/icon.svg"
 [autoload]
 
 Audiomanager="*res://Scripts/audiomanager.gd"
+songs="*res://new_script.gd"
 
 [display]
 

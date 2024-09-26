@@ -38,7 +38,9 @@ modulate = Color(0, 0, 0, 1)
 offset_left = 64.0
 offset_top = 307.0
 offset_right = 609.0
-offset_bottom = 383.0
-text = "Jonty Uren"
+offset_bottom = 443.0
+text = "Most of the game: Jonty Uren
+Music: Team Cherry (Hollow Knight)
+Also lots of help from my teacher and my classmates"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

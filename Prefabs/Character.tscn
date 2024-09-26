@@ -1,9 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://ba7sute0gamiq"]
+[gd_scene load_steps=18 format=3 uid="uid://ba7sute0gamiq"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_ehmgo"]
 [ext_resource type="Texture2D" uid="uid://buetwwc78gi1e" path="res://Sprites/FredAnim.png" id="2_y3tap"]
 [ext_resource type="Material" uid="uid://b6xfya71hvfpt" path="res://ParticleTextures/snow_walking_particles.tres" id="3_w6ejt"]
 [ext_resource type="Material" uid="uid://dlxwedvdrtxd3" path="res://ParticleTextures/dash_effects.tres" id="4_hl8xw"]
+[ext_resource type="AudioStream" uid="uid://m1wwpjxdew2k" path="res://Sounds/dash.mp3" id="5_dkwjm"]
+[ext_resource type="AudioStream" uid="uid://d0gvnx53lw47n" path="res://Sounds/jump.mp3" id="5_paosb"]
+[ext_resource type="AudioStream" uid="uid://bh8xsq6q5ycdw" path="res://Sounds/steptest.mp3" id="5_pq2ye"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3wj2"]
 atlas = ExtResource("2_y3tap")
@@ -116,6 +119,15 @@ process_material = ExtResource("3_w6ejt")
 emitting = false
 amount = 33
 process_material = ExtResource("4_hl8xw")
+
+[node name="dashsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_dkwjm")
+
+[node name="jumpsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_paosb")
+
+[node name="walkingsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pq2ye")
 
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
